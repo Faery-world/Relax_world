@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情绪放松冥想</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎来到放松冥想空间</h1>
+        <p>请选择你的当前情绪：</p>
+        <div class="emotion-select">
+            <button onclick="setEmotion('calm')">平静</button>
+            <button onclick="setEmotion('anxious')">焦虑</button>
+            <button onclick="setEmotion('happy')">开心</button>
+            <button onclick="setEmotion('sad')">难过</button>
+        </div>
+        <canvas id="dynamicCanvas"></canvas>
+        <div class="audio-controls">
+            <button onclick="toggleAudio()">播放/暂停环境音</button>
+        </div>
+    </div>
+
+    <audio id="ambientAudio" loop>
+        <source src="calm-sound.mp3" type="audio/mpeg">
+        你的浏览器不支持音频播放。
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
